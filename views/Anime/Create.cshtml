@@ -1,0 +1,40 @@
+@model AnimeCrudPro.Anime
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Anime | Panel de Gestión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="mb-0 text-center">✨ Registrar Nuevo Título</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/Anime/Create" method="post">
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-secondary">Título de la Obra</label>
+                                <input type="text" name="Titulo" class="form-control form-control-lg" placeholder="Nombre del anime..." required />
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-secondary">Total de Episodios</label>
+                                <input type="number" name="Episodios" class="form-control form-control-lg" placeholder="Ej: 24" required />
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg shadow-sm">Confirmar Registro</button>
+                                <a href="/Anime/Index" class="btn btn-link text-decoration-none text-muted text-center">Volver al Inventario</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-muted small">© 2026 Sistema de Gestión de Contenidos</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
