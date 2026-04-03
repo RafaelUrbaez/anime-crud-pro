@@ -9,7 +9,7 @@ namespace AnimeCrudPro
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                // Usamos parámetros @ para evitar que alguien nos borre la base de datos (Inyección SQL)
+                //parámetros @ para evitar que alguien nos borre la base de datos (Inyección SQL)
                 string query = "UPDATE Animes SET Titulo = @Titulo, Episodios = @Episodios WHERE Id = @Id";
                 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
